@@ -6,15 +6,15 @@ function min(n1, n2) {
   return n2;
 }
 
-console.log(min(1, 2));
+console.log(min(1, 2)); // returns 1
 
 /*
-Write a function isEven corresponding to:
--Zero is Even
--One is Odd
--For any other number N, its evenness is the same as N-2
-The function should accept a number parameter and return a boolean
- */
+** Write a function isEven corresponding to:
+** -Zero is Even
+** -One is Odd
+** -For any other number N, its evenness is the same as N-2
+** The function should accept a number parameter and return a boolean
+*/
 
 function isEven(input) {
   if (input === 0) {
