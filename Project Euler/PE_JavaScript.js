@@ -23,11 +23,13 @@ console.log(problem1()); // returns 233168
 ** By considering the terms in the Fibonacci sequence whose values do not
 ** exceed four million, find the sum of the even-valued terms.
 */
-function problem2(n) {
+function problem2(n) { // computes a Fibonacci number
   if (n === 1 || n === 2) {
     return 1;
   }
   return problem2(n - 1) + problem2(n - 2);
 }
 problem2(10);
+
+
 // incomplete

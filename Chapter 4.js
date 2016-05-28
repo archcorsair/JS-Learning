@@ -38,7 +38,11 @@ console.log(sum(numbers));
 // elements go up by increments of one. Make sure it also works with negative
 // step values.
 
-// function bonusRange(start, end, step) {
-//
-// }
-// work in progress
+function bonusRange(start, end, step = 1) {
+  const numArray = [];
+  // checks if the step is negative then applies correct condition.
+  for (let i = start; step > 0 ? i <= end : end <= i; i += step) {
+    numArray.push(i);
+  }
+  return numArray;
+}
