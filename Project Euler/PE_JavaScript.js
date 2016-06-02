@@ -24,12 +24,20 @@ console.log(problem1()); // returns 233168
 ** exceed four million, find the sum of the even-valued terms.
 */
 function problem2(n) { // computes a Fibonacci number
-  if (n === 1 || n === 2) {
-    return 1;
+  // Initialize the cache if it doesn't already exist
+  if (!problem2.hasOwnProperty('cache')) {
+    problem2.cache = [
+      0, // n === 0
+      1, // n === 1
+    ];
   }
-  return problem2(n - 1) + problem2(n - 2);
+  // Store the sum in the cache if it doesn't already have it
+  if (!problem2.cache.hasOwnProperty(n)) {
+    // Recursively call on n - 1 and n - 2 and store the sum in the cache
+    problem2.cache[n] = problem2(n - 1) + problem2(n - 2);
+  }
+  // Return the result from the cache
+  return problem2.cache[n];
 }
-problem2(10);
 
-
-// incomplete
+console.log(problem2(12));
