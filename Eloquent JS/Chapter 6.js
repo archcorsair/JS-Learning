@@ -11,9 +11,9 @@ const table = [
 ];
 
 function maxRowLength(arrays) {
-  const maxWidths = arrays[0].map(function (str) { return str.length; }); // 4,6,7
-  for (let i = 1; i < arrays.length; i++) {
-    const temp = arrays[i].map(function (str) { return str.length; });
+  const maxWidths = arrays[0].map(str => str.length); // Returns an array of array lengths
+  for (let i = 1; i < arrays.length; i++) {           // Start at 1 because above ran 0 already
+    const temp = arrays[i].map(str => str.length);
     for (let ii = 0; ii < temp.length; ii++) {
       if (temp[ii] > maxWidths[ii]) {
         maxWidths[ii] = temp[ii];
