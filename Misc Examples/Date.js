@@ -1,5 +1,5 @@
 // Date.now() returns current epoch time in miliseconds
-const myDate = new Date(Date.now());
+const myDate = new Date();
 // Returns Date in Local String format -> 6/5/2016, 3:21:06 PM
 console.log(myDate.toLocaleString());
 // Returns Date in UTC String format -> Sun, 05 Jun 2016 22:21:06 GMT
